@@ -40,7 +40,7 @@ As variáveis obrigatorias de input são username a remover. O user que remove t
 
 Um exemplo desta operação em JSON :
      
- #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/ AQUI FICA UM USERNAME /op2
+ #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/AQUI FICA UM USERNAME /op2
  
 {
     "username" : "User1"
@@ -55,7 +55,7 @@ O user que pede para imprimir os users tem como username o valor que está no pa
 
 Um exemplo desta operação em JSON :
         
- #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/ AQUI FICA UM USERNAME /op3
+ #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/AQUI FICA UM USERNAME /op3
  
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -67,7 +67,7 @@ O user que pede para alterar os atributos tem como username o valor que está no
 
 Um exemplo desta operação em JSON :
         
- #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/ AQUI FICA UM USERNAME /op3
+ #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/AQUI FICA UM USERNAME /op3
  
 {
 "username" : "User1",
@@ -85,7 +85,7 @@ O user que pede para alterar a sua palavra passe tem como username o valor que e
 
 Um exemplo desta operação em JSON :
         
- #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/ AQUI FICA UM USERNAME /op5
+ #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/AQUI FICA UM USERNAME /op5
 
 {
 	"oldPassword" : "1234567889",
@@ -123,7 +123,7 @@ O user que pede o token tem como username o valor que está no path.
 
 Um exemplo desta operação em JSON :
         
- #### URL a usar:  #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/ AQUI FICA UM USERNAME /op7
+ #### URL a usar:  #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/AQUI FICA UM USERNAME /op7
 
 
 
@@ -137,5 +137,5 @@ O user que pede o log out tem como username o valor que está no path.
 
 Um exemplo desta operação em JSON :
         
- #### URL a usar:  #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/ AQUI FICA UM USERNAME /op8
+ #### URL a usar:  #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/AQUI FICA UM USERNAME /op8
 
