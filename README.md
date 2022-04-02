@@ -4,7 +4,7 @@
 
 ### Caros Professores,
 
-Gostaria de começar por dizer, que por motivos de tempo, não me foi possível realizar a parte da interface do user. Optei por dar prioridade às operações. Peço          imensa desculpa, porque sei que vai dificultar a avaliação. Para testar as minhas operações usei o Postman. Abaixo estão as indicações de como testar as                operações.
+Gostaria de começar por dizer, que por motivos de tempo, não me foi possível realizar a parte da interface do user. Optei por dar prioridade às operações. Peço          imensa desculpa, porque sei que vai dificultar a avaliação. Para testar as minhas operações usei o Postman. Abaixo estão as indicações de como testar as                operações. Mais uma vez, peço desculpa.
         
         
         
@@ -138,6 +138,4 @@ O user que pede o log out tem como username o valor que está no path.
 Um exemplo desta operação em JSON :
         
  #### URL a usar:  #### URL a usar: https://arched-glass-344017.appspot.com/rest/test/op6/ AQUI FICA UM USERNAME /op8
-
-
 
