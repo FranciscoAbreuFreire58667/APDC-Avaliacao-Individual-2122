@@ -4,7 +4,7 @@
 
 ### Caros Professores,
 
-Gostaria de começar por dizer, que por motivos de tempo, não me foi possível realizar a parte da interface do user. Optei por dar prioridade às operações. Peço          imensa desculpa, porque sei que vai dificultar a avaliação. Para testar as minhas operações usei o Postman. Abaixo estão as indicações de como testar as                operações. Mais uma vez, peço desculpa.
+Gostaria de começar por dizer, que por motivos de tempo, não me foi possível realizar a parte da interface do user. Apenas consegui fazer o register. Optei por dar prioridade às operações. Peço imensa desculpa, porque sei que vai dificultar a avaliação. Para testar as minhas operações usei o Postman. Abaixo estão as indicações de como testar as operações. Mais uma vez, peço desculpa. Outra coisa de me apercebi, foi que o token da sessão não deveria ser guardado na datastore , mas sim na sessão do browser. Mais uma vez, não tive tempo de corrigir.
         
         
         
