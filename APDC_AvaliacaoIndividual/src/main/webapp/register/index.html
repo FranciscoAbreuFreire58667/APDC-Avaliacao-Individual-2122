@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: black;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+	padding: 16px;
+	background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+	background-color: #04AA6D;
+	color: white;
+	padding: 16px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+
+.registerbtn:hover {
+	opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+	color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+	background-color: #f1f1f1;
+	text-align: center;
+}
+</style>
+<script>
+	var xmlhttp = new XMLHttpRequest();
+	function getData() {
+		//alert(data);
+
+		if (xmlhttp) {
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4) {
+					if (xmlhttp.status == 200) {
+						var myObj = JSON.parse(xmlhttp.responseText);
+						alert(xmlhttp.responseText);
+						var i;
+						for (i = 0; i < myObj.length; i++) {
+							alert(myObj[i].name);
+						}
+					} else {
+						if (xmlhttp.status == 401)
+							alert("401: unauthorized" + xmlhttp.responseText);
+					}
+				}
+			}
+			xmlhttp.open("POST",
+					"https://arched-glass-344017.appspot.com/rest/test/op1",
+					true);
+			var data = JSON.stringify({
+				"username" : usernameElement.value,
+				"password" : passwordElement.value,
+				"passwordConfirmation" : confirmationElement.value,
+				"email" : emailElement.value,
+				"name" : nameElement.value,
+				"profilePublic" : profileElement.value,
+				"landlineNumber" : telephoneElement.value,
+				"mobilePhoneNumber" : cellphoneElement.value,
+				"NIF" : nifElement.value,
+				"mainAddress" : mainAddressElement.value,
+				"complementaryAddress" : complementaryAddressElement.value,
+				"placeOfAddress" : placeOfAddressElement.value
+
+			});
+			//alert(data);
+			xmlhttp.setRequestHeader("Content-type", "application/json");
+			xmlhttp.send(data);
+		}
+
+	}
+</script>
+</head>
+<body>
+	<H1>Registration form</H1>
+	<form name="form1">
+		<div class="container">
+			<h1>Register</h1>
+			<p>Please fill in this form to create an account.</p>
+			<hr>
+
+			<label for="usernameElement"><b>Username (Required)</b></label> <input
+				type="text" placeholder="Enter Username" name=usernameElement
+				id="usernameElement" required> <label for="passwordElement"><b>Password
+					(Required)</b></label><input type="password" placeholder="Enter Password"
+				name="passwordElement" id="passwordElement" required> <label
+				for="confirmationElement"><b>Repeat Password (Required)</b></label>
+			<input type="password" placeholder="Repeat Password"
+				name="confirmationElement" id="confirmationElement" required>
+			<label for="emailElement"><b>Email (Required)</b></label><input
+				type="text" placeholder="Enter Email" name="emailElement"
+				id="emailElement" required> <label for="nameElement"><b>Name
+					(Required)</b></label><input type="text" placeholder="Enter Name"
+				name="nameElement" id="nameElement" required> <label
+				for="profileElement"><b>Profile (Optional)</b></label><input
+				type="text" placeholder="Enter Profile" name="profileElement"
+				id="profileElement"> <label for="telephoneElement"><b>Telephone
+					(Optional)</b></label><input type="text" placeholder="Enter Telephone"
+				name="telephoneElement" id="telephoneElement"> <label
+				for="cellphoneElement"><b>Cellphone (Optional)</b></label> <input
+				type="text" placeholder="Enter Cellphone" name="cellphoneElement"
+				id="cellphoneElement"> <label for="nifElement"><b>NIF
+					(Optional)</b></label> <input type="text" placeholder="Enter NIF"
+				name="nifElement" id="nifElement">
+				
+				<label for="mainAddressElement"><b>Main Address
+					(Optional)</b></label> <input type="text" placeholder="Enter Main Address"
+				name="mainAddressElement" id="mainAddressElement">
+				
+				<label for="complementaryAddressElement"><b>Complementary Address
+					(Optional)</b></label> <input type="text" placeholder="Enter Complementary Address"
+				name="complementaryAddressElement" id="complementaryAddressElement">
+				
+				<label for="placeOfAddressElement"><b>Place Of Address
+					(Optional)</b></label> <input type="text" placeholder="Place Of Address"
+				name="placeOfAddressElement" id="placeOfAddressElement">
+			<hr>
+			<p>
+				By creating an account you agree to our <a href="#">Terms and
+					Privacy</a>.
+			</p>
+
+			<button type="submit" class="registerbtn" onclick="getData()">Register</button>
+		</div>
+
+		<div class="container signin">
+			<p>
+				Already have an account? <a
+					href="https://arched-glass-344017.appspot.com/rest/test/op6">Sign
+					in</a>.
+			</p>
+		</div>
+	</form>
+
+</body>
+</html>
